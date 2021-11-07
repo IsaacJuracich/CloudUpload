@@ -1,0 +1,17 @@
+C:\Users\aj550\Documents\CloudUpload\CloudUpload\CloudUpload\bin\Debug\CloudUpload.exe.config
+C:\Users\aj550\Documents\CloudUpload\CloudUpload\CloudUpload\bin\Debug\CloudUpload.exe
+C:\Users\aj550\Documents\CloudUpload\CloudUpload\CloudUpload\bin\Debug\CloudUpload.pdb
+C:\Users\aj550\Documents\CloudUpload\CloudUpload\CloudUpload\bin\Debug\MegaApiClient.dll
+C:\Users\aj550\Documents\CloudUpload\CloudUpload\CloudUpload\bin\Debug\Newtonsoft.Json.dll
+C:\Users\aj550\Documents\CloudUpload\CloudUpload\CloudUpload\bin\Debug\MegaApiClient.xml
+C:\Users\aj550\Documents\CloudUpload\CloudUpload\CloudUpload\bin\Debug\Newtonsoft.Json.xml
+C:\Users\aj550\Documents\CloudUpload\CloudUpload\CloudUpload\obj\Debug\CloudUpload.csproj.AssemblyReference.cache
+C:\Users\aj550\Documents\CloudUpload\CloudUpload\CloudUpload\obj\Debug\CloudUpload.Main.resources
+C:\Users\aj550\Documents\CloudUpload\CloudUpload\CloudUpload\obj\Debug\CloudUpload.Properties.Resources.resources
+C:\Users\aj550\Documents\CloudUpload\CloudUpload\CloudUpload\obj\Debug\CloudUpload.csproj.GenerateResource.cache
+C:\Users\aj550\Documents\CloudUpload\CloudUpload\CloudUpload\obj\Debug\CloudUpload.csproj.CoreCompileInputs.cache
+C:\Users\aj550\Documents\CloudUpload\CloudUpload\CloudUpload\obj\Debug\CloudUpload.exe
+C:\Users\aj550\Documents\CloudUpload\CloudUpload\CloudUpload\obj\Debug\CloudUpload.pdb
+C:\Users\aj550\Documents\CloudUpload\CloudUpload\CloudUpload\obj\Debug\CloudUpload.Output.resources
+C:\Users\aj550\Documents\CloudUpload\CloudUpload\CloudUpload\obj\Debug\CloudUpload.Settings.resources
+C:\Users\aj550\Documents\CloudUpload\CloudUpload\CloudUpload\obj\Debug\CloudUpload.Upload.resources
