@@ -36,6 +36,8 @@ namespace CloudUpload
             this.Settings = new System.Windows.Forms.Label();
             this.Ram = new System.Windows.Forms.Label();
             this.Cpu = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Output
@@ -108,12 +110,37 @@ namespace CloudUpload
             this.Cpu.TabIndex = 5;
             this.Cpu.Text = "CPU:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Chiller", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(157)))), ((int)(((byte)(255)))));
+            this.label1.Location = new System.Drawing.Point(-5, 199);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(855, 34);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "________________________________________________________";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Chiller", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(157)))), ((int)(((byte)(255)))));
+            this.label2.Location = new System.Drawing.Point(-3, 233);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(195, 111);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Data:";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(846, 508);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Cpu);
             this.Controls.Add(this.Ram);
             this.Controls.Add(this.Settings);
@@ -140,6 +167,8 @@ namespace CloudUpload
         private System.Windows.Forms.Label Settings;
         private System.Windows.Forms.Label Ram;
         private System.Windows.Forms.Label Cpu;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

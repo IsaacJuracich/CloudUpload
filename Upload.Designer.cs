@@ -116,7 +116,7 @@ namespace CloudUpload
             this.OuputBuffer.Multiline = true;
             this.OuputBuffer.Name = "OuputBuffer";
             this.OuputBuffer.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.OuputBuffer.Size = new System.Drawing.Size(629, 517);
+            this.OuputBuffer.Size = new System.Drawing.Size(629, 509);
             this.OuputBuffer.TabIndex = 10;
             // 
             // FileUpload

@@ -45,7 +45,7 @@ namespace CloudUpload {
         }
 
         private void Home_Click(object sender, EventArgs e) {
-
+            return;
         }
         private async void stats() {
             while (true) {
@@ -55,6 +55,10 @@ namespace CloudUpload {
                 Ram.Text = "RAM: " + Program.ramV + "MB";
                 await Task.Delay(500);
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e) {
+
         }
     }
 }

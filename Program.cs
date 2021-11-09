@@ -28,7 +28,6 @@ namespace CloudUpload {
             cpu.NextValue();
             ram.NextValue();
             Thread.Sleep(500);
-            dynamic result = new ExpandoObject();
             cpuV = Math.Round(cpu.NextValue() / Environment.ProcessorCount, 2).ToString();
             ramV = Math.Round(ram.NextValue() / 1024 / 1024, 2).ToString();
         }
