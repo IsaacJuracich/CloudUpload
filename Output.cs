@@ -56,5 +56,8 @@ namespace CloudUpload {
                 await Task.Delay(2500);
             }
         }
+        private void Reset_Click(object sender, EventArgs e) {
+            System.IO.File.WriteAllText("outputbuffer.txt", "");
+        }
     }
 }

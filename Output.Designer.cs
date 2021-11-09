@@ -34,6 +34,7 @@ namespace CloudUpload
             this.Home = new System.Windows.Forms.Label();
             this.Upload = new System.Windows.Forms.Label();
             this.Settings = new System.Windows.Forms.Label();
+            this.Reset = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // OuputBuffer
@@ -89,12 +90,25 @@ namespace CloudUpload
             this.Settings.Text = "Settings";
             this.Settings.Click += new System.EventHandler(this.Settings_Click);
             // 
+            // Reset
+            // 
+            this.Reset.AutoSize = true;
+            this.Reset.Font = new System.Drawing.Font("Chiller", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Reset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(157)))), ((int)(((byte)(255)))));
+            this.Reset.Location = new System.Drawing.Point(24, 465);
+            this.Reset.Name = "Reset";
+            this.Reset.Size = new System.Drawing.Size(63, 34);
+            this.Reset.TabIndex = 5;
+            this.Reset.Text = "Reset";
+            this.Reset.Click += new System.EventHandler(this.Reset_Click);
+            // 
             // Output
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(846, 508);
+            this.Controls.Add(this.Reset);
             this.Controls.Add(this.Settings);
             this.Controls.Add(this.Upload);
             this.Controls.Add(this.Home);
@@ -118,5 +132,6 @@ namespace CloudUpload
         private System.Windows.Forms.Label Home;
         private System.Windows.Forms.Label Upload;
         private System.Windows.Forms.Label Settings;
+        private System.Windows.Forms.Label Reset;
     }
 }

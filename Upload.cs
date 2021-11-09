@@ -48,7 +48,7 @@ namespace CloudUpload {
             string toWrite = null;
             foreach (var i in Program.client.GetSessionsHistory())
                 toWrite = toWrite + "\n" + $"IP: {i.IpAddress} | LoginTime: {i.LoginTime} | LastSeen: {i.LastSeenTime}";
-            System.IO.File.WriteAllText("outputbuffer.txt", $"{System.IO.File.ReadAllText("outputbuffer.txt") + "\n" + toWrite}");
+            System.IO.File.WriteAllText("outputbuffer.txt", $"{System.IO.File.ReadAllText("outputbuffer.txt") + "\n" + toWrite + "\n" + Cloud_Upload_Errors.Success.ClientLoginSuccess}");
         }
         private void Logout_Click(object sender, EventArgs e) {
             if (Program.client == null) {
@@ -93,6 +93,12 @@ namespace CloudUpload {
             foreach (string i in OuputBuffer.Text.Split('\n'))
                 data.Add(i);
             return data.Last();
+        }
+        private void LogoutMultiple_Click(object sender, EventArgs e) {
+
+        }
+        private void UploadMultiple_Click(object sender, EventArgs e) {
+
         }
     }
 }

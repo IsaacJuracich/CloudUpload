@@ -40,6 +40,9 @@ namespace CloudUpload
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.Url = new System.Windows.Forms.Label();
             this.URLLINK = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.UploadMultiple = new System.Windows.Forms.Label();
+            this.LogoutMultiple = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Home
@@ -133,7 +136,7 @@ namespace CloudUpload
             this.Url.AutoSize = true;
             this.Url.Font = new System.Drawing.Font("Chiller", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Url.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(157)))), ((int)(((byte)(255)))));
-            this.Url.Location = new System.Drawing.Point(743, 440);
+            this.Url.Location = new System.Drawing.Point(743, 435);
             this.Url.Name = "Url";
             this.Url.Size = new System.Drawing.Size(91, 34);
             this.Url.TabIndex = 12;
@@ -151,12 +154,50 @@ namespace CloudUpload
             this.URLLINK.TabIndex = 13;
             this.URLLINK.Text = "null";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Chiller", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(157)))), ((int)(((byte)(255)))));
+            this.label1.Location = new System.Drawing.Point(735, 351);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(165, 34);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "__________";
+            // 
+            // UploadMultiple
+            // 
+            this.UploadMultiple.AutoSize = true;
+            this.UploadMultiple.Font = new System.Drawing.Font("Chiller", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UploadMultiple.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(157)))), ((int)(((byte)(255)))));
+            this.UploadMultiple.Location = new System.Drawing.Point(743, 337);
+            this.UploadMultiple.Name = "UploadMultiple";
+            this.UploadMultiple.Size = new System.Drawing.Size(112, 34);
+            this.UploadMultiple.TabIndex = 15;
+            this.UploadMultiple.Text = "Upload (x)";
+            this.UploadMultiple.Click += new System.EventHandler(this.UploadMultiple_Click);
+            // 
+            // LogoutMultiple
+            // 
+            this.LogoutMultiple.AutoSize = true;
+            this.LogoutMultiple.Font = new System.Drawing.Font("Chiller", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogoutMultiple.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(157)))), ((int)(((byte)(255)))));
+            this.LogoutMultiple.Location = new System.Drawing.Point(742, 293);
+            this.LogoutMultiple.Name = "LogoutMultiple";
+            this.LogoutMultiple.Size = new System.Drawing.Size(113, 34);
+            this.LogoutMultiple.TabIndex = 16;
+            this.LogoutMultiple.Text = "Logout (x)";
+            this.LogoutMultiple.Click += new System.EventHandler(this.LogoutMultiple_Click);
+            // 
             // Upload
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(846, 508);
+            this.Controls.Add(this.LogoutMultiple);
+            this.Controls.Add(this.UploadMultiple);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.URLLINK);
             this.Controls.Add(this.Url);
             this.Controls.Add(this.FileUpload);
@@ -190,5 +231,8 @@ namespace CloudUpload
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Label Url;
         private System.Windows.Forms.TextBox URLLINK;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label UploadMultiple;
+        private System.Windows.Forms.Label LogoutMultiple;
     }
 }
