@@ -125,11 +125,11 @@ namespace CloudUpload
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Chiller", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Chiller", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(157)))), ((int)(((byte)(255)))));
             this.label2.Location = new System.Drawing.Point(-3, 233);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(195, 111);
+            this.label2.Size = new System.Drawing.Size(130, 74);
             this.label2.TabIndex = 7;
             this.label2.Text = "Data:";
             // 

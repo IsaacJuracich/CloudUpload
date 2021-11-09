@@ -10,18 +10,20 @@ using System.Windows.Forms;
 
 namespace CloudUpload {
     public partial class Output : Form {
+        public Cloud_Upload_Settings.Settings settings = new Cloud_Upload_Settings.Settings("settings.ini");
         public Output() {
             InitializeComponent();
         }
-
         private void Output_Load(object sender, EventArgs e) {
-            updateOutputBuffer();
+            if (settings.Read("ouputFile", "CloudUpload.Logs") == null || settings.Read("ouputFile", "CloudUpload.Logs") == "") {
+                OuputBuffer.Text = Cloud_Upload_Errors.Errors.OuputFileNull.ToString();
+                System.IO.File.WriteAllText("defaultbuffer.txt", Cloud_Upload_Errors.Errors.OuputFileNull.ToString());
+            }
+            else updateOutputBuffer();
         }
-
         private void OuputBuffer_TextChanged(object sender, EventArgs e) {
 
         }
-
         private void Home_Click(object sender, EventArgs e) {
             this.Hide();
             Form main = new Main();
@@ -30,7 +32,6 @@ namespace CloudUpload {
             main.StartPosition = FormStartPosition.Manual;
             main.Show();
         }
-
         private void Upload_Click(object sender, EventArgs e) {
             this.Hide();
             Form upload = new Upload();
@@ -38,7 +39,6 @@ namespace CloudUpload {
             upload.Location = this.Location;
             upload.Show();
         }
-
         private void Settings_Click(object sender, EventArgs e) {
             this.Hide();
             Form settings = new Settings();
@@ -48,16 +48,21 @@ namespace CloudUpload {
         }
         private async void updateOutputBuffer() {
             while (true) {
-                string tosend = null;
-                foreach (string str in System.IO.File.ReadAllText("outputbuffer.txt").Split('\n')) {
-                    tosend = tosend + $"\r\n{str}\n";
+                if (settings.Read("ouputFile", "CloudUpload.Logs") == null || settings.Read("ouputFile", "CloudUpload.Logs") == "") {
+                    OuputBuffer.Text = Cloud_Upload_Errors.Errors.OuputFileNull.ToString();
+                    System.IO.File.WriteAllText("defaultbuffer.txt", Cloud_Upload_Errors.Errors.OuputFileNull.ToString());
                 }
-                OuputBuffer.Text = tosend;
+                else {
+                    string tosend = null;
+                    foreach (string str in System.IO.File.ReadAllText(settings.Read("ouputFile", "CloudUpload.Logs")).Split('\n'))
+                        tosend = tosend + $"\r\n{str}\n";
+                    OuputBuffer.Text = tosend;
+                }
                 await Task.Delay(2500);
             }
         }
         private void Reset_Click(object sender, EventArgs e) {
-            System.IO.File.WriteAllText("outputbuffer.txt", "");
+            System.IO.File.WriteAllText(settings.Read("ouputFile", "CloudUpload.Logs"), "");
         }
     }
 }

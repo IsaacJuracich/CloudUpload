@@ -52,5 +52,10 @@ namespace CloudUpload {
         private void OuputBuffer_TextChanged(object sender, EventArgs e) {
 
         }
+        private void OuputBuffer_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e) {
+            if (e.Control && e.KeyCode == Keys.S) {
+                MessageBox.Show("ok");
+            }
+        }
     }
 }

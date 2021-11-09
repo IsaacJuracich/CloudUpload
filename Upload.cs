@@ -100,5 +100,9 @@ namespace CloudUpload {
         private void UploadMultiple_Click(object sender, EventArgs e) {
 
         }
+
+        private void OuputBuffer_TextChanged(object sender, EventArgs e) {
+
+        }
     }
 }
