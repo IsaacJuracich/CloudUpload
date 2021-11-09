@@ -36,6 +36,10 @@ namespace CloudUpload
             this.Login = new System.Windows.Forms.Label();
             this.Logout = new System.Windows.Forms.Label();
             this.OuputBuffer = new System.Windows.Forms.TextBox();
+            this.FileUpload = new System.Windows.Forms.Label();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.Url = new System.Windows.Forms.Label();
+            this.URLLINK = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Home
@@ -102,15 +106,50 @@ namespace CloudUpload
             // 
             this.OuputBuffer.AcceptsTab = true;
             this.OuputBuffer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.OuputBuffer.Font = new System.Drawing.Font("Chiller", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OuputBuffer.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OuputBuffer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(157)))), ((int)(((byte)(255)))));
             this.OuputBuffer.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OuputBuffer.Location = new System.Drawing.Point(106, -1);
             this.OuputBuffer.Multiline = true;
             this.OuputBuffer.Name = "OuputBuffer";
             this.OuputBuffer.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.OuputBuffer.Size = new System.Drawing.Size(745, 517);
+            this.OuputBuffer.Size = new System.Drawing.Size(629, 517);
             this.OuputBuffer.TabIndex = 10;
+            // 
+            // FileUpload
+            // 
+            this.FileUpload.AutoSize = true;
+            this.FileUpload.Font = new System.Drawing.Font("Chiller", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FileUpload.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(157)))), ((int)(((byte)(255)))));
+            this.FileUpload.Location = new System.Drawing.Point(743, 395);
+            this.FileUpload.Name = "FileUpload";
+            this.FileUpload.Size = new System.Drawing.Size(71, 34);
+            this.FileUpload.TabIndex = 11;
+            this.FileUpload.Text = "Upload";
+            this.FileUpload.Click += new System.EventHandler(this.FileUpload_Click);
+            // 
+            // Url
+            // 
+            this.Url.AutoSize = true;
+            this.Url.Font = new System.Drawing.Font("Chiller", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Url.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(157)))), ((int)(((byte)(255)))));
+            this.Url.Location = new System.Drawing.Point(743, 440);
+            this.Url.Name = "Url";
+            this.Url.Size = new System.Drawing.Size(91, 34);
+            this.Url.TabIndex = 12;
+            this.Url.Text = "FolderUrl";
+            this.Url.Click += new System.EventHandler(this.Url_Click);
+            // 
+            // URLLINK
+            // 
+            this.URLLINK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.URLLINK.Font = new System.Drawing.Font("Chiller", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.URLLINK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(157)))), ((int)(((byte)(255)))));
+            this.URLLINK.Location = new System.Drawing.Point(741, 476);
+            this.URLLINK.Name = "URLLINK";
+            this.URLLINK.Size = new System.Drawing.Size(100, 32);
+            this.URLLINK.TabIndex = 13;
+            this.URLLINK.Text = "null";
             // 
             // Upload
             // 
@@ -118,6 +157,9 @@ namespace CloudUpload
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(846, 508);
+            this.Controls.Add(this.URLLINK);
+            this.Controls.Add(this.Url);
+            this.Controls.Add(this.FileUpload);
             this.Controls.Add(this.OuputBuffer);
             this.Controls.Add(this.Logout);
             this.Controls.Add(this.Login);
@@ -144,5 +186,9 @@ namespace CloudUpload
         private System.Windows.Forms.Label Login;
         private System.Windows.Forms.Label Logout;
         private System.Windows.Forms.TextBox OuputBuffer;
+        private System.Windows.Forms.Label FileUpload;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.Label Url;
+        private System.Windows.Forms.TextBox URLLINK;
     }
 }

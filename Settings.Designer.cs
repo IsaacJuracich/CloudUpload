@@ -78,7 +78,7 @@ namespace CloudUpload
             // 
             this.OuputBuffer.AcceptsTab = true;
             this.OuputBuffer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.OuputBuffer.Font = new System.Drawing.Font("Chiller", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OuputBuffer.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OuputBuffer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(157)))), ((int)(((byte)(255)))));
             this.OuputBuffer.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OuputBuffer.Location = new System.Drawing.Point(106, -1);
@@ -87,6 +87,7 @@ namespace CloudUpload
             this.OuputBuffer.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.OuputBuffer.Size = new System.Drawing.Size(745, 517);
             this.OuputBuffer.TabIndex = 6;
+            this.OuputBuffer.TextChanged += new System.EventHandler(this.OuputBuffer_TextChanged);
             // 
             // Reset
             // 

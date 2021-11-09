@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -10,12 +11,16 @@ using System.Windows.Forms;
 
 namespace CloudUpload {
     public partial class Main : Form {
+        public bool breakTask = false;
         public Main() {
             InitializeComponent();
         }
         private void Main_Load(object sender, EventArgs e) {
+            breakTask = false;
+            stats();
         }
         private void Output_Click(object sender, EventArgs e) {
+            breakTask = true;
             this.Hide();
             Form output = new Output();
             output.Closed += (s, args) => this.Close();
@@ -23,6 +28,7 @@ namespace CloudUpload {
             output.Show();
         }
         private void Upload_Click(object sender, EventArgs e) {
+            breakTask = true;
             this.Hide();
             Form upload = new Upload();
             upload.Closed += (s, args) => this.Close();
@@ -30,6 +36,7 @@ namespace CloudUpload {
             upload.Show();
         }
         private void Settings_Click(object sender, EventArgs e) {
+            breakTask = true;
             this.Hide();
             Form settings = new Settings();
             settings.Closed += (s, args) => this.Close();
@@ -39,6 +46,15 @@ namespace CloudUpload {
 
         private void Home_Click(object sender, EventArgs e) {
 
+        }
+        private async void stats() {
+            while (true) {
+                if (breakTask) break;
+                Program.getUsage();
+                Cpu.Text = "CPU: " + Program.cpuV + "%";
+                Ram.Text = "RAM: " + Program.ramV + "MB";
+                await Task.Delay(500);
+            }
         }
     }
 }

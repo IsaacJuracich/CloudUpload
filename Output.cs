@@ -15,6 +15,7 @@ namespace CloudUpload {
         }
 
         private void Output_Load(object sender, EventArgs e) {
+            updateOutputBuffer();
         }
 
         private void OuputBuffer_TextChanged(object sender, EventArgs e) {
@@ -44,6 +45,16 @@ namespace CloudUpload {
             settings.Closed += (s, args) => this.Close();
             settings.Location = this.Location;
             settings.Show();
+        }
+        private async void updateOutputBuffer() {
+            while (true) {
+                string tosend = null;
+                foreach (string str in System.IO.File.ReadAllText("outputbuffer.txt").Split('\n')) {
+                    tosend = tosend + $"\r\n{str}\n";
+                }
+                OuputBuffer.Text = tosend;
+                await Task.Delay(2500);
+            }
         }
     }
 }

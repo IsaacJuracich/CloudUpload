@@ -49,5 +49,8 @@ namespace CloudUpload {
             await Task.Delay(3500);
             OuputBuffer.Text = System.IO.File.ReadAllText("settings.ini");
         }
+        private void OuputBuffer_TextChanged(object sender, EventArgs e) {
+
+        }
     }
 }
